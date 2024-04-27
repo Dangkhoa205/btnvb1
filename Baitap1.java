@@ -4,33 +4,44 @@ package project_01;
 
 public class Baitap1 {
  static int soNguyenTo(int n) {
-    int i;
-        if (n < 2) {
-            return 0;
-        }
-        for ( i = 2; i <= math.sqrt(n); i++) {
-            if (n % i == 0) {
-                break;
-            }
-        }
-        return n;
+    int i,j,so;
+         if (n < 2) {
+        return 0; 
     }
 
-     static int soLe(int j) {
+    for (j = 2; j * j <= n; j++) {
+        if (n % j == 0) {
+            return 0; 
+        }
+    }
+
+    return n;
+        
+    }
+
+      static int soLe(int j) {
         if(j % 2 != 0){
-        return j;
-         }
+           return j;
+        }
+        else {
+        return 0;
+        }
         }
  
     public static void main(String[] args) {
         // TODO code application logic here
       int a = 13; 
         int b = 7;
-        System.out.println(a);
-        System.out.println(b);
- 
+      
+        int ketQua = soNguyenTo(a);
+    int     thongBao = soLe(b);
+
+        
+            System.out.println(ketQua);
+            System.out.println(thongBao);
+        } 
 }
 
-    }
+    
     
 
